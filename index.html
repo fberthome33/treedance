@@ -48,13 +48,11 @@
 
 			const manager = new THREE.LoadingManager();
 
-			let camera, scene, renderer, stats, object, loader, guiMorphsFolder;
+			let camera, scene, renderer, object, loader;
 			let mixer;
 			let action, animationDuration;
 			let FPS = 60;
 
-			let currentFrame = 0;
-			let deltaCheckPoint = -1;
 			let frames = 0; 
 			let fbxFrameElapsed = 0; 
 			let prevTime = performance.now();
@@ -82,12 +80,10 @@
 			init();
 
 			function init() {
-				//- Using an anonymous function:
 				document.getElementById("action1").onclick = function () { loadAsset(assets[0]) };		
 				document.getElementById("action2").onclick = function () { loadAsset(assets[1]) };		
 
 				// Button controls
-				//const startButton = document.getElementById('startButton');
 				const pauseButton = document.getElementById('pauseButton');
 
 	
@@ -104,8 +100,6 @@
 				});
 
 
-
-
 				const container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
@@ -113,33 +107,24 @@
 				camera.position.set( 100, 200, 300 );
 
 				scene = new THREE.Scene();
-				scene.background = new THREE.Color( 0xa0a0a0 );
+				scene.background = new THREE.Color( 0x2C2C2C );
 
-				const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x444444, 5 );
+				const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x000000, 5 );
 				hemiLight.position.set( 0, 200, 0 );
 				scene.add( hemiLight );
 
-				const dirLight = new THREE.DirectionalLight( 0xffffff, 5 );
-				dirLight.position.set( 0, 200, 100 );
-				dirLight.castShadow = true;
-				dirLight.shadow.camera.top = 180;
-				dirLight.shadow.camera.bottom = - 100;
-				dirLight.shadow.camera.left = - 120;
-				dirLight.shadow.camera.right = 120;
-				scene.add( dirLight );
-
-				// scene.add( new THREE.CameraHelper( dirLight.shadow.camera ) );
-
+			
+				
 				// ground
-				const mesh = new THREE.Mesh( new THREE.PlaneGeometry( 2000, 2000 ), new THREE.MeshPhongMaterial( { color: 0x999999, depthWrite: false } ) );
+				const mesh = new THREE.Mesh( new THREE.PlaneGeometry( 2000, 2000 ), new THREE.MeshPhongMaterial( { color: 0x424242, depthWrite: false } ) );
 				mesh.rotation.x = - Math.PI / 2;
-				mesh.receiveShadow = true;
+				//mesh.receiveShadow = true;
 				scene.add( mesh );
 
 				const grid = new THREE.GridHelper( 2000, 20, 0x000000, 0x000000 );
 				grid.material.opacity = 0.2;
 				grid.material.transparent = true;
-				scene.add( grid );
+				//scene.add( grid );
 			
 				loader = new FBXLoader( manager );
 				loadAsset( params );
@@ -157,10 +142,6 @@
 
 				window.addEventListener( 'resize', onWindowResize );
 
-				// stats
-				stats = new Stats();
-				//container.appendChild( stats.dom );
-
 				const gui = new GUI();
 				gui.add( params, 'asset', assets ).onChange( function ( value ) {
 
@@ -168,16 +149,20 @@
 
 				} );
 
-				guiMorphsFolder = gui.addFolder( 'Morphs' ).hide();
-
 			}
 
 			function initTimeData() {
-				deltaCheckPoint = 0;
 				frames = 0;
 				prevTime = performance.now();
 				fbxFrameElapsed = 0;
 				nftArrayIndex = 0;
+
+				if (action) {
+					action.time = 0;  // Set animation to specific time
+				}
+				if (mixer) {
+					mixer.update(0);  // Force an immediate update
+				}
 			}
 
 			function loadAsset( asset ) {
@@ -185,7 +170,6 @@
 				initTimeData();
 				loadJsonFile("data/json/" + asset.data).then(data => {
 					nftArray = data;
-					console.log(data);  // Array of objects
 				});
 
 				loader.load(  "data/model/" + fbxAssetFile + '.fbx', function ( group ) {
@@ -247,11 +231,7 @@
 
 							let i;
 							for (i = 0; i < nftArray.length; i++) {
-								let currentData = nftArray[i];
-								let startFrame = currentData.framesRangeOwned[0];
-								let stopFrame = currentData.framesRangeOwned[1];
-								let fbxFrameElapsed = action.time * FPS;
-								if(fbxFrameElapsed >=  startFrame && fbxFrameElapsed <=  stopFrame) {
+								if(isBetweenMetadataPeriod(i)) {
 									break;
 								}
 							}
@@ -264,31 +244,6 @@
 
 					}
 
-					guiMorphsFolder.children.forEach( ( child ) => child.destroy() );
-					guiMorphsFolder.hide();
-
-					object.traverse( function ( child ) {
-
-						if ( child.isMesh ) {
-
-							child.castShadow = true;
-							child.receiveShadow = true;
-
-							if ( child.morphTargetDictionary ) {
-
-								guiMorphsFolder.show();
-								const meshFolder = guiMorphsFolder.addFolder( child.name || child.uuid );
-								Object.keys( child.morphTargetDictionary ).forEach( ( key ) => {
-			
-									meshFolder.add( child.morphTargetInfluences, child.morphTargetDictionary[ key ], 0, 1, 0.01 );
-			
-								} );
-			
-							}
-
-						}
-
-					} );
 
 					scene.add( object );
 
@@ -305,28 +260,25 @@
 
 			}
 
-			
-			function checkDateCheckPoint(deltaSum, fpsVar) {
-				
-				if(deltaSum >= deltaCheckPoint ) {
-					
-					console.log(deltaSum);
-		
-					deltaCheckPoint +=1;
-				}
+
+			function isBetweenMetadataPeriod(nftArrayIndex) {
+				let currentData = nftArray[nftArrayIndex];
+				let startFrame = currentData.framesRangeOwned[0];
+				let stopFrame = currentData.framesRangeOwned[1];
+				let fbxFrameElapsed = action.time * FPS;
+				return fbxFrameElapsed >=  startFrame && fbxFrameElapsed <=  stopFrame;
 			}
+
 
 			function displayInformation(fps) {
 				if(fps != 0) {
-					console.log("FPS: " +fps);
-					console.log("action time "+action.time + " : " + action.time * FPS);
 					if (nftArrayIndex < nftArray.length) {
+						let isInPeriod = isBetweenMetadataPeriod(nftArrayIndex);
 						let currentData = nftArray[nftArrayIndex];
 						let startFrame = currentData.framesRangeOwned[0];
 						let stopFrame = currentData.framesRangeOwned[1];
 						let fbxFrameElapsed = action.time * fps;
-						if(fbxFrameElapsed >=  startFrame && fbxFrameElapsed <=  stopFrame) {
-						} else {
+						if(! isInPeriod) {
 							nftArrayIndex++;
 						}
 						document.getElementById("nftMetadata").innerHTML = JSON.stringify(nftArray[nftArrayIndex]);
@@ -342,8 +294,6 @@
 				
 				if ( time >= prevTime + 1000 ) {
 					let fps = Math.round( ( frames * 1000 ) / ( time - prevTime ) ) 
-					//console.log( "Real Frame: " + fps);
-				
 					frames = 0;
 					prevTime = time;
 					return fps;
@@ -364,10 +314,7 @@
 					const time = action.time;
 					timeline.value = action.time * 1000;  
 
-					//FPS = getFPS(); // assuming your FBX is 24 frames per second
-
-					checkDateCheckPoint(time, FPS);
-					currentFrame = Math.floor(time * FPS); // Convert time to frame index
+					//FPS = getFPS();
 					displayInformation(FPS);
 					
 				}
@@ -375,25 +322,20 @@
 				
 				renderer.render( scene, camera );
 
-				stats.update();
-
 			}
 
 		async function loadJsonFile(fileName) {
 			try {
 				const response = await fetch(fileName);
-				
 				if (!response.ok) {
 				throw new Error(`Failed to load ${fileName}: ${response.statusText}`);
 				}
 
 				const jsonData = await response.json();
-
-				// Assuming the file content is an array of objects
 				return jsonData;
 			} catch (error) {
 				console.error('Error loading JSON file:', error);
-				return []; // Return an empty array in case of error
+				return [];
 			}
 		}
 
