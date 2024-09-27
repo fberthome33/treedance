@@ -1,0 +1,109 @@
+[{
+    "name": "NFT 1",
+    "framesRangeOwned": [
+      0,
+      345
+    ],
+    "metadata": "value",
+    "metadata2": "value 2",
+    "metadata3": "value 3",
+    "metadata4": "value 4",
+    "metadata5": "value 5"
+  },
+  {
+    "name": "NFT 2",
+    "framesRangeOwned": [
+      346,
+      538
+    ],
+    "metadata": "value",
+    "metadata2": "value 2",
+    "metadata3": "value 3",
+    "metadata4": "value 4",
+    "metadata5": "value 5"
+  },
+  {
+    "name": "NFT 3",
+    "framesRangeOwned": [
+      538,
+      642
+    ],
+    "metadata": "value",
+    "metadata2": "value 2",
+    "metadata3": "value 3",
+    "metadata4": "value 4",
+    "metadata5": "value 5"
+  },
+  {
+    "name": "NFT 4",
+    "framesRangeOwned": [
+      643,
+      978
+    ],
+    "metadata": "value",
+    "metadata2": "value 2",
+    "metadata3": "value 3",
+    "metadata4": "value 4",
+    "metadata5": "value 5"
+  },
+  {
+    "name": "NFT 5",
+    "framesRangeOwned": [
+      978,
+      1479
+    ],
+    "metadata": "value",
+    "metadata2": "value 2",
+    "metadata3": "value 3",
+    "metadata4": "value 4",
+    "metadata5": "value 5"
+  },
+  {
+    "name": "NFT 6",
+    "framesRangeOwned": [
+      1480,
+      1932
+    ],
+    "metadata": "value",
+    "metadata2": "value 2",
+    "metadata3": "value 3",
+    "metadata4": "value 4",
+    "metadata5": "value 5"
+  },
+  {
+    "name": "NFT 7",
+    "framesRangeOwned": [
+      1933,
+      2472
+    ],
+    "metadata": "value",
+    "metadata2": "value 2",
+    "metadata3": "value 3",
+    "metadata4": "value 4",
+    "metadata5": "value 5"
+  },
+  {
+    "name": "NFT 8",
+    "framesRangeOwned": [
+      2473,
+      3283
+    ],
+    "metadata": "value",
+    "metadata2": "value 2",
+    "metadata3": "value 3",
+    "metadata4": "value 4",
+    "metadata5": "value 5"
+  },
+  {
+    "name": "NFT 9",
+    "framesRangeOwned": [
+      3283,
+      4549
+    ],
+    "metadata": "value",
+    "metadata2": "value 2",
+    "metadata3": "value 3",
+    "metadata4": "value 4",
+    "metadata5": "value 5"
+  }
+]

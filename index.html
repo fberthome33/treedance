@@ -8,11 +8,23 @@
 	</head>
 
 	<body>
-		<button type="button" id="action1">1_The Pond_Spheres_on_each_bones</button>
-		<button type="button" id="action2">2_Echoes_Spheres_on_each_bones</button>
-		<div id="info">
-			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - FBXLoader<br />
-			Character and animation from <a href="https://www.mixamo.com/" target="_blank" rel="noopener">Mixamo</a>
+		<div id="controls">
+			<div>
+				<button type="button" id="action1">1_The Pond_Spheres_on_each_bones</button>
+				<button type="button" id="action2">2_Echoes_Spheres_on_each_bones</button>
+			</div>
+			<div>
+				<!--button id="startButton">Start Animation</button-->
+				<button id="pauseButton">Pause Animation</button>
+			</div>
+			<div>
+				<input type="range" id="timeline" min="0" max="100" value="0">
+			</div>
+			<div id="nftMetadata">
+			</div>
+		</div>
+		
+
 		</div>
 
 		<script type="importmap">
@@ -38,17 +50,32 @@
 
 			let camera, scene, renderer, stats, object, loader, guiMorphsFolder;
 			let mixer;
+			let action, animationDuration;
+			let FPS = 60;
+
 			let currentFrame = 0;
-			let deltaSum= 0;
+			let deltaCheckPoint = -1;
+			let frames = 0; 
+			let fbxFrameElapsed = 0; 
+			let prevTime = performance.now();
+			let nftArrayIndex = 0;
+			let nftArray = [];
+			
+
+
+			let paused = false;
+			const timeline = document.getElementById('timeline');  // The timeline slider
+
+
 			const clock = new THREE.Clock();
 
 			const params = {
-				asset: '1_The Pond_Spheres_on_each_bones',
+				asset: '1_The Pond_Spheres_on_each_bones', data: 'data_ThePond.json',
 			};
 
 			const assets = [
-				'1_The Pond_Spheres_on_each_bones',
-				'2_Echoes_Spheres_on_each_bones',
+				{asset: '1_The Pond_Spheres_on_each_bones', data: 'data_ThePond.json'},
+				{asset: '2_Echoes_Spheres_on_each_bones', data: 'data_Echoes.json'}
 			];
 
 
@@ -56,8 +83,29 @@
 
 			function init() {
 				//- Using an anonymous function:
-				document.getElementById("action1").onclick = function () { loadAsset('1_The Pond_Spheres_on_each_bones'); };		
-				document.getElementById("action2").onclick = function () { loadAsset('2_Echoes_Spheres_on_each_bones'); };		
+				document.getElementById("action1").onclick = function () { loadAsset(assets[0]) };		
+				document.getElementById("action2").onclick = function () { loadAsset(assets[1]) };		
+
+				// Button controls
+				//const startButton = document.getElementById('startButton');
+				const pauseButton = document.getElementById('pauseButton');
+
+	
+				// Pause animation
+				pauseButton.addEventListener('click', function() {
+					if (action) {
+						action.paused = !action.paused;  // Toggle pause
+						if (action.paused) {
+							console.log('Animation paused');
+						} else {
+							console.log('Animation resumed');
+						}
+					}
+				});
+
+
+
+
 				const container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
@@ -94,7 +142,7 @@
 				scene.add( grid );
 			
 				loader = new FBXLoader( manager );
-				loadAsset( params.asset );
+				loadAsset( params );
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
@@ -111,7 +159,7 @@
 
 				// stats
 				stats = new Stats();
-				container.appendChild( stats.dom );
+				//container.appendChild( stats.dom );
 
 				const gui = new GUI();
 				gui.add( params, 'asset', assets ).onChange( function ( value ) {
@@ -124,11 +172,23 @@
 
 			}
 
-			function loadAsset( asset ) {
-				console.log(asset);
-				deltaSum = 0;
+			function initTimeData() {
+				deltaCheckPoint = 0;
+				frames = 0;
+				prevTime = performance.now();
+				fbxFrameElapsed = 0;
+				nftArrayIndex = 0;
+			}
 
-				loader.load(  "model/" + asset + '.fbx', function ( group ) {
+			function loadAsset( asset ) {
+				let fbxAssetFile = asset.asset;
+				initTimeData();
+				loadJsonFile("data/json/" + asset.data).then(data => {
+					nftArray = data;
+					console.log(data);  // Array of objects
+				});
+
+				loader.load(  "data/model/" + fbxAssetFile + '.fbx', function ( group ) {
 
 					if ( object ) {
 
@@ -162,8 +222,41 @@
 
 						mixer = new THREE.AnimationMixer( object );
 
-						const action = mixer.clipAction( object.animations[ 0 ] );
+						action = mixer.clipAction( object.animations[ 0 ] );
+						animationDuration = object.animations[0].duration; 
+						timeline.max = animationDuration * 1000;  // Set timeline slider max based on animation duration (in ms)
+
+
 						action.play();
+
+						// Add an event listener to detect when the animation ends
+						action.loop = THREE.LoopRepeat;     // Optional: play the animation only once (no looping)
+
+						// Detect when the animation has finished
+						mixer.addEventListener('loop', function(event) {
+							console.log('Animation is restarted');
+							initTimeData();
+							// Here you can trigger whatever you want when the animation finishes
+            			});
+
+						timeline.addEventListener('input', function () {
+							paused = true;  // Pause animation when using slider
+							const timeInSeconds = timeline.value / 1000;  // Convert slider value to seconds
+							action.time = timeInSeconds;  // Set animation to specific time
+							mixer.update(0);  // Force an immediate update
+
+							let i;
+							for (i = 0; i < nftArray.length; i++) {
+								let currentData = nftArray[i];
+								let startFrame = currentData.framesRangeOwned[0];
+								let stopFrame = currentData.framesRangeOwned[1];
+								let fbxFrameElapsed = action.time * FPS;
+								if(fbxFrameElapsed >=  startFrame && fbxFrameElapsed <=  stopFrame) {
+									break;
+								}
+							}
+							nftArrayIndex = i;
+						});
 
 					} else {
 
@@ -212,38 +305,97 @@
 
 			}
 
-			//
-			// Function to check for specific frame
-			function checkFrame(frame) {
-				if (currentFrame === frame) {
-					console.log(`Reached frame ${frame}`);
+			
+			function checkDateCheckPoint(deltaSum, fpsVar) {
 				
+				if(deltaSum >= deltaCheckPoint ) {
+					
+					console.log(deltaSum);
+		
+					deltaCheckPoint +=1;
 				}
 			}
 
+			function displayInformation(fps) {
+				if(fps != 0) {
+					console.log("FPS: " +fps);
+					console.log("action time "+action.time + " : " + action.time * FPS);
+					if (nftArrayIndex < nftArray.length) {
+						let currentData = nftArray[nftArrayIndex];
+						let startFrame = currentData.framesRangeOwned[0];
+						let stopFrame = currentData.framesRangeOwned[1];
+						let fbxFrameElapsed = action.time * fps;
+						if(fbxFrameElapsed >=  startFrame && fbxFrameElapsed <=  stopFrame) {
+						} else {
+							nftArrayIndex++;
+						}
+						document.getElementById("nftMetadata").innerHTML = JSON.stringify(nftArray[nftArrayIndex]);
+					} else {
+						document.getElementById("nftMetadata").innerHTML = "";
+					}
+				}
+			}
+
+			function getFPS() {
+				frames ++;
+				const time = performance.now();
+				
+				if ( time >= prevTime + 1000 ) {
+					let fps = Math.round( ( frames * 1000 ) / ( time - prevTime ) ) 
+					//console.log( "Real Frame: " + fps);
+				
+					frames = 0;
+					prevTime = time;
+					return fps;
+				}
+				return 0;
+			}
+			
 			function animate() {
 
 				const delta = clock.getDelta();
-				deltaSum += delta;
-
 				if ( mixer ) {
 					mixer.update( delta );
-					// Get the time from the animation and convert it to frame
-					const action = mixer.existingAction(mixer._actions[0]._clip);
-					const time = action.time;
-					const fps = 24; // assuming your FBX is 24 frames per second
-					currentFrame = Math.floor(time * fps); // Convert time to frame index
+					
 
-					// Check specific frames
-					checkFrame(1);  // Check for frame 1
-					checkFrame(2);  // Check for frame 2
-					checkFrame(10); // You can add more frames here
+					fbxFrameElapsed++;
+					// Get the time from the animation and convert it to frame
+					action = mixer.existingAction(mixer._actions[0]._clip);
+					const time = action.time;
+					timeline.value = action.time * 1000;  
+
+					//FPS = getFPS(); // assuming your FBX is 24 frames per second
+
+					checkDateCheckPoint(time, FPS);
+					currentFrame = Math.floor(time * FPS); // Convert time to frame index
+					displayInformation(FPS);
+					
 				}
+
+				
 				renderer.render( scene, camera );
 
 				stats.update();
 
 			}
+
+		async function loadJsonFile(fileName) {
+			try {
+				const response = await fetch(fileName);
+				
+				if (!response.ok) {
+				throw new Error(`Failed to load ${fileName}: ${response.statusText}`);
+				}
+
+				const jsonData = await response.json();
+
+				// Assuming the file content is an array of objects
+				return jsonData;
+			} catch (error) {
+				console.error('Error loading JSON file:', error);
+				return []; // Return an empty array in case of error
+			}
+		}
 
 		</script>
 
