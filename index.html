@@ -9,21 +9,37 @@
 
 	<body>
 		<div id="controls">
-			<div>
-				<button type="button" id="action1">1_The Pond_Spheres_on_each_bones</button>
-				<button type="button" id="action2">2_Echoes_Spheres_on_each_bones</button>
+			<div id="buttonContainer">
+			</div> <!-- The div where the buttons will be displayed -->
 			</div>
 			<div>
 				<!--button id="startButton">Start Animation</button-->
-				<button id="pauseButton">Pause Animation</button>
+				
 			</div>
 			<div>
-				<input type="range" id="timeline" min="0" max="100" value="0">
+				<!--input type="range" id="timeline" min="0" max="100" value="0"-->
+				
 			</div>
-			<div id="nftMetadata">
-			</div>
+
+
 		</div>
-		
+		<div id="nftMetadataDisplay">
+		</div>
+		<div id="bottom">
+			<button id="pauseButton">Pause Animation</button>	
+			<div class="gauge-container" id="gaugeContainer">
+				<div class="gauge" id="gauge"></div>
+				<div id="pointer" class="pointer" style="left: 0;">
+					<div id="pointer-label" class="pointer-label">0</div>
+				</div>
+			</div>
+			<div>
+				
+				<div style="text-align: center;">
+					<input type="range" id="timeline" min="0" max="100" value="0">
+				</div>
+			</div>		
+
 
 		</div>
 
@@ -51,7 +67,7 @@
 			let camera, scene, renderer, object, loader;
 			let mixer;
 			let action, animationDuration;
-			let FPS = 60;
+			let FPS = 22;
 
 			let frames = 0; 
 			let fbxFrameElapsed = 0; 
@@ -68,21 +84,67 @@
 			const clock = new THREE.Clock();
 
 			const params = {
-				asset: '1_The Pond_Spheres_on_each_bones', data: 'data_ThePond.json',
+				asset: '1_The Pond_Spheres_final', data: 'data.json', startIndex: 0, endIndex: 11
 			};
 
 			const assets = [
-				{asset: '1_The Pond_Spheres_on_each_bones', data: 'data_ThePond.json'},
-				{asset: '2_Echoes_Spheres_on_each_bones', data: 'data_Echoes.json'}
+				{asset: '1_The Pond_Spheres_final', label: 'CRONE 3: The Pond', data: 'data.json', startIndex: 0, endIndex: 11},
+				{asset: '2_Echoes_Spheres_final', label: 'CRONE 1: Echoes', data: 'data.json', startIndex: 12, endIndex: 18},
+				{asset: '3 - Duet With Zephyr final', label: 'MAIDEN 1: Duet With Zephyr', data: 'data.json', startIndex: 19, endIndex: 35},
+				{asset: '4 - Undoing as doing with spheres', label: 'CRONE 2: Undoing as Doing', data: 'data.json', startIndex: 0, endIndex: 11},
+				{asset: '5 - Should this be a solo with spheres', label: 'MOTHER 1: Should This Be A Solo?', data: 'data.json', startIndex: 12, endIndex: 18},
+				{asset: '6 - Sculpture flirt with spheres', label: 'MAIDEN 3: Sculpture Flirt', data: 'data.json', startIndex: 19, endIndex: 35},
+				{asset: '7 - Curtain on pleasure', label: 'MAIDEN 2: Curtain on Pleasure', data: 'data.json', startIndex: 0, endIndex: 11},
+				{asset: '8 - Failed self-care attempts with spheres', label: 'MOTHER 3: Failed Self-care Attempts', data: 'data.json', startIndex: 12, endIndex: 18},
+				{asset: '9 - Nurture as mania with sphere', label: 'MOTHER 2: Nurture as Mania', data: 'data.json', startIndex: 19, endIndex: 35}
 			];
+			const segmentsColors = ["#b1b0b1", "#8a8988"];
+
+
+			const gaugeContainer = document.getElementById('gaugeContainer');
+			const gaugeElement = document.getElementById('gauge');
+			const pointer = document.getElementById('pointer');
+			const pointerLabel = document.getElementById('pointer-label');
+			const gaugeWidth = gaugeContainer.offsetWidth;
+
+			let isDragging = false;
 
 
 			init();
 
-			function init() {
-				document.getElementById("action1").onclick = function () { loadAsset(assets[0]) };		
-				document.getElementById("action2").onclick = function () { loadAsset(assets[1]) };		
 
+
+			function createButtons() {
+				let buttonContainer = document.getElementById('buttonContainer');
+
+				// Loop to create 10 buttons with the class 'custom-button'
+				for (let i = 0; i < assets.length; i++) {
+					const button = document.createElement('button'); // Create a new button element
+					button.type = 'button';
+					button.className = 'loadFileButton'; // Add class to button
+					button.innerText = assets[i].label; // Set button text
+
+					// Add click event listener to each button
+					button.addEventListener('click', function() {
+						loadAsset(assets[i]); 
+
+						// Remove 'active' class from all buttons
+						const buttons = document.querySelectorAll('.loadFileButton');
+						buttons.forEach(btn => btn.classList.remove('active'));
+
+						// Add 'active' class to the clicked button
+						button.classList.add('active');
+					});
+
+					buttonContainer.appendChild(button); // Append the button to the container
+				}
+			}
+
+
+			function init() {
+				createButtons();
+				
+		
 				// Button controls
 				const pauseButton = document.getElementById('pauseButton');
 
@@ -99,18 +161,36 @@
 					}
 				});
 
+				// Click and drag functionality
+				gaugeContainer.addEventListener('mousedown', function (e) {
+					isDragging = true;
+					const position = e.clientX - gaugeContainer.getBoundingClientRect().left;
+					updatePointer(position);
+				});
+
+				document.addEventListener('mouseup', function () {
+					isDragging = false;
+				});
+
+				document.addEventListener('mousemove', function (e) {
+					if (isDragging) {
+						const position = e.clientX - gaugeContainer.getBoundingClientRect().left;
+						updatePointer(position);
+					}
+				});
+
 
 				const container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
-				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-				camera.position.set( 100, 200, 300 );
-
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 3000 );
+				//camera.position.set( 100, 200, 300 );
+				camera.position.set(7.39, 424.20, 1799.75);
 				scene = new THREE.Scene();
 				scene.background = new THREE.Color( 0x2C2C2C );
 
 				const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x000000, 5 );
-				hemiLight.position.set( 0, 200, 0 );
+				hemiLight.position.set( 0, 100, 0 );
 				scene.add( hemiLight );
 
 			
@@ -137,18 +217,55 @@
 				container.appendChild( renderer.domElement );
 
 				const controls = new OrbitControls( camera, renderer.domElement );
-				controls.target.set( 0, 100, 0 );
+				controls.target.set( 0, 0, 0 );
 				controls.update();
 
 				window.addEventListener( 'resize', onWindowResize );
 
 				const gui = new GUI();
-				gui.add( params, 'asset', assets ).onChange( function ( value ) {
+
+
+				
+				/*gui.add( params, 'asset', assets ).onChange( function ( value ) {
 
 					loadAsset( value );
 
-				} );
+				} );*/
 
+			}
+
+
+
+			// Function to dynamically create gauge segments based on the array
+			function createGaugeSegments() {
+				gaugeElement.innerHTML = ''; // Clear the gauge before rendering
+
+				let maxDuration = nftArray[nftArray.length - 1].ownership_range_end;
+
+				nftArray.forEach((segment, index) => {
+					const segmentDiv = document.createElement('div');
+					segmentDiv.classList.add('gauge-segment');
+					segmentDiv.style.backgroundColor = segmentsColors[index % 2]; //segment.color;
+
+					// Dynamically set the width and left position of each segment
+					const segmentStart = (segment.ownership_range_start / maxDuration) * gaugeWidth;
+					const segmentWidth = ((segment.ownership_range_end - segment.ownership_range_start) / maxDuration) * gaugeWidth;
+
+					segmentDiv.style.left = `${segmentStart}px`;  // Start position
+					segmentDiv.style.width = `${segmentWidth}px`; // Width based on the range
+					//segmentDiv.innerText = segment.name; // Add the label text
+
+					// Apply border-radius only to the first and last segments
+					if (index === 0) {
+						segmentDiv.style.borderRadius = "0"; //"5px 0 0 5px"; // Round left for the first segment
+					} else if (index === nftArray.length - 1) {
+						segmentDiv.style.borderRadius = "0"; //"0 5px 5px 0"; // Round right for the last segment
+					} else {
+						segmentDiv.style.borderRadius = "0"; // No rounding for middle segments
+					}
+
+					gaugeElement.appendChild(segmentDiv);
+				});
 			}
 
 			function initTimeData() {
@@ -165,11 +282,50 @@
 				}
 			}
 
+			function updatePointer(position) {
+				const percentage = (position / gaugeWidth) * 100;
+				const value = Math.max(0, Math.min(100, percentage));
+				const leftPosition = (value / 100) * gaugeWidth;
+
+				pointer.style.left = leftPosition + 'px';
+				pointerLabel.innerText = Math.round(value);
+			}
+
+			function updatePointerLabel(label) {
+				pointerLabel.innerText = label;
+			}
+
+			function updateMoviePosition() {
+				paused = true;  // Pause animation when using slider
+				const timeInSeconds = timeline.value / 1000;  // Convert slider value to seconds
+				action.time = timeInSeconds;  // Set animation to specific time
+				mixer.update(0);  // Force an immediate update
+
+				let i;
+				for (i = 0; i < nftArray.length; i++) {
+					if(isBetweenMetadataPeriod(i)) {
+						break;
+					}
+				}
+				nftArrayIndex = i;
+				const labelPointer = nftArray[nftArrayIndex].name;
+
+
+				const value = timeline.value;
+				const percentage = value / timeline.max;
+				const position = percentage * gaugeWidth;
+				updatePointer(position);
+				//updatePointerLabel(labelPointer);
+			}
+
 			function loadAsset( asset ) {
 				let fbxAssetFile = asset.asset;
 				initTimeData();
 				loadJsonFile("data/json/" + asset.data).then(data => {
-					nftArray = data;
+					nftArray = data.slice(asset.startIndex, asset.endIndex + 1);;
+					
+					// Call the function to create gauge segments
+					createGaugeSegments();
 				});
 
 				loader.load(  "data/model/" + fbxAssetFile + '.fbx', function ( group ) {
@@ -218,24 +374,12 @@
 
 						// Detect when the animation has finished
 						mixer.addEventListener('loop', function(event) {
-							console.log('Animation is restarted');
 							initTimeData();
 							// Here you can trigger whatever you want when the animation finishes
             			});
 
 						timeline.addEventListener('input', function () {
-							paused = true;  // Pause animation when using slider
-							const timeInSeconds = timeline.value / 1000;  // Convert slider value to seconds
-							action.time = timeInSeconds;  // Set animation to specific time
-							mixer.update(0);  // Force an immediate update
-
-							let i;
-							for (i = 0; i < nftArray.length; i++) {
-								if(isBetweenMetadataPeriod(i)) {
-									break;
-								}
-							}
-							nftArrayIndex = i;
+							updateMoviePosition();
 						});
 
 					} else {
@@ -263,8 +407,8 @@
 
 			function isBetweenMetadataPeriod(nftArrayIndex) {
 				let currentData = nftArray[nftArrayIndex];
-				let startFrame = currentData.framesRangeOwned[0];
-				let stopFrame = currentData.framesRangeOwned[1];
+				let startFrame = currentData.ownership_range_start;
+				let stopFrame = currentData.ownership_range_end;
 				let fbxFrameElapsed = action.time * FPS;
 				return fbxFrameElapsed >=  startFrame && fbxFrameElapsed <=  stopFrame;
 			}
@@ -275,17 +419,30 @@
 					if (nftArrayIndex < nftArray.length) {
 						let isInPeriod = isBetweenMetadataPeriod(nftArrayIndex);
 						let currentData = nftArray[nftArrayIndex];
-						let startFrame = currentData.framesRangeOwned[0];
-						let stopFrame = currentData.framesRangeOwned[1];
+						let startFrame = currentData.ownership_range_start;
+						let stopFrame = currentData.ownership_range_end;
 						let fbxFrameElapsed = action.time * fps;
 						if(! isInPeriod) {
 							nftArrayIndex++;
 						}
-						document.getElementById("nftMetadata").innerHTML = JSON.stringify(nftArray[nftArrayIndex]);
+						const jsonData = nftArray[nftArrayIndex];
+						document.getElementById("nftMetadataDisplay").innerHTML = displayJson(jsonData);
 					} else {
-						document.getElementById("nftMetadata").innerHTML = "";
+						document.getElementById("nftMetadataDisplay").innerHTML = "";
 					}
 				}
+			}
+
+			function displayJson(json) {
+				let output = ''; // String to hold the key/value pairs
+
+				// Loop through each key in the JSON object
+				for (const key in json) {
+					if (json.hasOwnProperty(key)) {
+						output += `${key}: ${json[key]}<br>`; // Append key/value pair with a line break
+					}
+				}
+				return output;
 			}
 
 			function getFPS() {
@@ -314,12 +471,17 @@
 					const time = action.time;
 					timeline.value = action.time * 1000;  
 
+
+					const value = timeline.value;
+					const percentage = value / timeline.max;
+					const position = percentage * gaugeWidth;
+
+					updatePointer(position);
 					//FPS = getFPS();
 					displayInformation(FPS);
 					
 				}
 
-				
 				renderer.render( scene, camera );
 
 			}
