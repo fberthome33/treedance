@@ -1,7 +1,7 @@
 [
     {
         "name": "Crone 3: The pond I",
-        "image_name": "0",
+        "image_name": "1",
         "frame": "428",
         "ownership_range": "[0 - 1069]",
         "ownership_range_start": "0",
@@ -18,14 +18,11 @@
         "signature_bone": "head",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "4.55%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "4,55%"
     },
     {
         "name": "Crone 3: The pond II",
-        "image_name": "1",
+        "image_name": "2",
         "frame": "1710",
         "ownership_range": "[1069 - 1853]",
         "ownership_range_start": "1069",
@@ -42,14 +39,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "3.34%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "3,34%"
     },
     {
         "name": "Crone 3: The pond III",
-        "image_name": "2",
+        "image_name": "3",
         "frame": "1995",
         "ownership_range": "[1853 - 2070]",
         "ownership_range_start": "1853",
@@ -66,14 +60,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.92%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,92%"
     },
     {
         "name": "Crone 3: The pond IV",
-        "image_name": "3",
+        "image_name": "4",
         "frame": "2144",
         "ownership_range": "[2070 - 2224]",
         "ownership_range_start": "2070",
@@ -90,14 +81,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.66%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,66%"
     },
     {
         "name": "Crone 3: The pond V",
-        "image_name": "4",
+        "image_name": "5",
         "frame": "2304",
         "ownership_range": "[2224 - 2324]",
         "ownership_range_start": "2224",
@@ -114,14 +102,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.42%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,42%"
     },
     {
         "name": "Crone 3: The pond VI",
-        "image_name": "5",
+        "image_name": "6",
         "frame": "2343",
         "ownership_range": "[2324 - 2777]",
         "ownership_range_start": "2324",
@@ -138,14 +123,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "YES",
         "scenic_route": "Null",
-        "buying_time": "1.93%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,93%"
     },
     {
         "name": "Crone 3: The pond VII",
-        "image_name": "6",
+        "image_name": "7",
         "frame": "3210",
         "ownership_range": "[2777 - 3325]",
         "ownership_range_start": "2777",
@@ -162,14 +144,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "2.34%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "2,34%"
     },
     {
         "name": "Crone 3: The pond VIII",
-        "image_name": "7",
+        "image_name": "8",
         "frame": "3440",
         "ownership_range": "[3325 - 3568]",
         "ownership_range_start": "3325",
@@ -186,14 +165,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.03%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,03%"
     },
     {
         "name": "Crone 3: The pond IX",
-        "image_name": "8",
+        "image_name": "9",
         "frame": "3695",
         "ownership_range": "[3568 - 3765]",
         "ownership_range_start": "3568",
@@ -210,14 +186,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.84%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,84%"
     },
     {
         "name": "Crone 3: The pond X",
-        "image_name": "9",
+        "image_name": "10",
         "frame": "3834",
         "ownership_range": "[3765 - 3994]",
         "ownership_range_start": "3765",
@@ -234,14 +207,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.98%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,98%"
     },
     {
         "name": "Crone 3: The pond XI",
-        "image_name": "10",
+        "image_name": "11",
         "frame": "4153",
         "ownership_range": "[3994 - 4322]",
         "ownership_range_start": "3994",
@@ -258,14 +228,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.40%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,40%"
     },
     {
         "name": "Crone 3: The pond XII",
-        "image_name": "11",
+        "image_name": "12",
         "frame": "4490",
         "ownership_range": "[4322 - 4547]",
         "ownership_range_start": "4322",
@@ -282,14 +249,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.96%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,96%"
     },
     {
-        "name": "Crone 1: Echoes XII",
-        "image_name": "12",
+        "name": "Crone 1: Echoes I",
+        "image_name": "13",
         "frame": "327",
         "ownership_range": "[0 - 544]",
         "ownership_range_start": "0",
@@ -306,14 +270,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "2.32%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "2,32%"
     },
     {
-        "name": "Crone 1: Echoes XIII",
-        "image_name": "13",
+        "name": "Crone 1: Echoes II",
+        "image_name": "14",
         "frame": "761",
         "ownership_range": "[544 - 919]",
         "ownership_range_start": "544",
@@ -330,14 +291,11 @@
         "signature_bone": "head",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.60%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,60%"
     },
     {
-        "name": "Crone 1: Echoes XIV",
-        "image_name": "14",
+        "name": "Crone 1: Echoes III",
+        "image_name": "15",
         "frame": "1076",
         "ownership_range": "[919 - 1165]",
         "ownership_range_start": "919",
@@ -354,14 +312,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.05%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,05%"
     },
     {
-        "name": "Crone 1: Echoes XV",
-        "image_name": "15",
+        "name": "Crone 1: Echoes IV",
+        "image_name": "16",
         "frame": "1254",
         "ownership_range": "[1165 - 1463]",
         "ownership_range_start": "1165",
@@ -378,14 +333,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "YES",
         "scenic_route": "Null",
-        "buying_time": "1.27%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,27%"
     },
     {
-        "name": "Crone 1: Echoes XVI",
-        "image_name": "16",
+        "name": "Crone 1: Echoes V",
+        "image_name": "17",
         "frame": "1672",
         "ownership_range": "[1463 - 1860]",
         "ownership_range_start": "1463",
@@ -402,14 +354,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.69%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,69%"
     },
     {
-        "name": "Crone 1: Echoes XVII",
-        "image_name": "17",
+        "name": "Crone 1: Echoes VI",
+        "image_name": "18",
         "frame": "2047",
         "ownership_range": "[1860 - 2312]",
         "ownership_range_start": "1860",
@@ -426,14 +375,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.93%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,93%"
     },
     {
-        "name": "Crone 1: Echoes XVIII",
-        "image_name": "18",
+        "name": "Crone 1: Echoes VII",
+        "image_name": "19",
         "frame": "2577",
         "ownership_range": "[2312 - 2833]",
         "ownership_range_start": "2312",
@@ -450,14 +396,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "YES",
         "scenic_route": "Null",
-        "buying_time": "2.22%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "2,22%"
     },
     {
         "name": "Maiden 1: Duet with zephyr I",
-        "image_name": "19",
+        "image_name": "20",
         "frame": "250",
         "ownership_range": "[0 - 307]",
         "ownership_range_start": "0",
@@ -474,14 +417,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.31%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,31%"
     },
     {
         "name": "Maiden 1: Duet with zephyr II",
-        "image_name": "20",
+        "image_name": "21",
         "frame": "363",
         "ownership_range": "[307 - 619]",
         "ownership_range_start": "307",
@@ -498,14 +438,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.33%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,33%"
     },
     {
         "name": "Maiden 1: Duet with zephyr III",
-        "image_name": "21",
+        "image_name": "22",
         "frame": "875",
         "ownership_range": "[619 - 973]",
         "ownership_range_start": "619",
@@ -522,14 +459,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.51%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,51%"
     },
     {
         "name": "Maiden 1: Duet with zephyr IV",
-        "image_name": "22",
+        "image_name": "23",
         "frame": "1071",
         "ownership_range": "[973 - 1124]",
         "ownership_range_start": "973",
@@ -546,14 +480,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "YES",
-        "buying_time": "0.64%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,64%"
     },
     {
         "name": "Maiden 1: Duet with zephyr V",
-        "image_name": "23",
+        "image_name": "24",
         "frame": "1177",
         "ownership_range": "[1124 - 1218]",
         "ownership_range_start": "1124",
@@ -570,14 +501,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.40%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,40%"
     },
     {
         "name": "Maiden 1: Duet with zephyr VI",
-        "image_name": "24",
+        "image_name": "25",
         "frame": "1259",
         "ownership_range": "[1218 - 1403]",
         "ownership_range_start": "1218",
@@ -594,14 +522,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.79%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,79%"
     },
     {
         "name": "Maiden 1: Duet with zephyr VII",
-        "image_name": "25",
+        "image_name": "26",
         "frame": "1546",
         "ownership_range": "[1403 - 1610]",
         "ownership_range_start": "1403",
@@ -618,14 +543,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.88%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,88%"
     },
     {
         "name": "Maiden 1: Duet with zephyr VIII",
-        "image_name": "26",
+        "image_name": "27",
         "frame": "1674",
         "ownership_range": "[1610 - 1689]",
         "ownership_range_start": "1610",
@@ -642,14 +564,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.34%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,34%"
     },
     {
         "name": "Maiden 1: Duet with zephyr IX",
-        "image_name": "27",
+        "image_name": "28",
         "frame": "1704",
         "ownership_range": "[1689 - 1779]",
         "ownership_range_start": "1689",
@@ -666,14 +585,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.38%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,38%"
     },
     {
         "name": "Maiden 1: Duet with zephyr X",
-        "image_name": "28",
+        "image_name": "29",
         "frame": "1854",
         "ownership_range": "[1779 - 1915]",
         "ownership_range_start": "1779",
@@ -690,14 +606,11 @@
         "signature_bone": "spine",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.58%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,58%"
     },
     {
         "name": "Maiden 1: Duet with zephyr XI",
-        "image_name": "29",
+        "image_name": "30",
         "frame": "1975",
         "ownership_range": "[1915 - 2291]",
         "ownership_range_start": "1915",
@@ -714,14 +627,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.60%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,60%"
     },
     {
         "name": "Maiden 1: Duet with zephyr XII",
-        "image_name": "30",
+        "image_name": "31",
         "frame": "2607",
         "ownership_range": "[2291 - 2627]",
         "ownership_range_start": "2291",
@@ -738,14 +648,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.43%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,43%"
     },
     {
         "name": "Maiden 1: Duet with zephyr XIII",
-        "image_name": "31",
+        "image_name": "32",
         "frame": "2647",
         "ownership_range": "[2627 - 2673]",
         "ownership_range_start": "2627",
@@ -762,14 +669,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.20%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,20%"
     },
     {
         "name": "Maiden 1: Duet with zephyr XIV",
-        "image_name": "32",
+        "image_name": "33",
         "frame": "2699",
         "ownership_range": "[2673 - 2717]",
         "ownership_range_start": "2673",
@@ -786,14 +690,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.19%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,19%"
     },
     {
         "name": "Maiden 1: Duet with zephyr XV",
-        "image_name": "33",
+        "image_name": "34",
         "frame": "2735",
         "ownership_range": "[2717 - 2805]",
         "ownership_range_start": "2717",
@@ -810,14 +711,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "YES",
-        "buying_time": "0.37%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,37%"
     },
     {
         "name": "Maiden 1: Duet with zephyr XVI",
-        "image_name": "34",
+        "image_name": "35",
         "frame": "2875",
         "ownership_range": "[2805 - 3043]",
         "ownership_range_start": "2805",
@@ -834,14 +732,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.01%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,01%"
     },
     {
         "name": "Maiden 1: Duet with zephyr XVII",
-        "image_name": "35",
+        "image_name": "36",
         "frame": "3210",
         "ownership_range": "[3043 - 3231]",
         "ownership_range_start": "3043",
@@ -858,14 +753,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.80%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,80%"
     },
     {
         "name": "Crone 2: Undoing as doing I",
-        "image_name": "36",
+        "image_name": "37",
         "frame": "77",
         "ownership_range": "[0 - 310]",
         "ownership_range_start": "0",
@@ -882,14 +774,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.32%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,32%"
     },
     {
         "name": "Crone 2: Undoing as doing II",
-        "image_name": "37",
+        "image_name": "38",
         "frame": "543",
         "ownership_range": "[310 - 645]",
         "ownership_range_start": "310",
@@ -906,14 +795,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.43%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,43%"
     },
     {
         "name": "Crone 2: Undoing as doing III",
-        "image_name": "38",
+        "image_name": "39",
         "frame": "747",
         "ownership_range": "[645 - 761]",
         "ownership_range_start": "645",
@@ -930,14 +816,11 @@
         "signature_bone": "head",
         "intimacy_in_stillness": "YES",
         "scenic_route": "Null",
-        "buying_time": "0.49%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,49%"
     },
     {
-        "name": "Mother 1: Should this be a solo? IV",
-        "image_name": "39",
+        "name": "Mother 1: Should this be a solo? I",
+        "image_name": "40",
         "frame": "60",
         "ownership_range": "[0 - 118]",
         "ownership_range_start": "0",
@@ -954,14 +837,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.50%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,50%"
     },
     {
-        "name": "Mother 1: Should this be a solo? V",
-        "image_name": "40",
+        "name": "Mother 1: Should this be a solo? II",
+        "image_name": "41",
         "frame": "176",
         "ownership_range": "[118 - 244]",
         "ownership_range_start": "118",
@@ -978,14 +858,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.53%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,53%"
     },
     {
-        "name": "Mother 1: Should this be a solo? VI",
-        "image_name": "41",
+        "name": "Mother 1: Should this be a solo? III",
+        "image_name": "42",
         "frame": "311",
         "ownership_range": "[244 - 321]",
         "ownership_range_start": "244",
@@ -1002,14 +879,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.33%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,33%"
     },
     {
-        "name": "Mother 1: Should this be a solo? VII",
-        "image_name": "42",
+        "name": "Mother 1: Should this be a solo? IV",
+        "image_name": "43",
         "frame": "331",
         "ownership_range": "[321 - 365]",
         "ownership_range_start": "321",
@@ -1026,14 +900,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.19%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,19%"
     },
     {
-        "name": "Mother 1: Should this be a solo? VIII",
-        "image_name": "43",
+        "name": "Mother 1: Should this be a solo? V",
+        "image_name": "44",
         "frame": "398",
         "ownership_range": "[365 - 417]",
         "ownership_range_start": "365",
@@ -1050,14 +921,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.22%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,22%"
     },
     {
-        "name": "Mother 1: Should this be a solo? IX",
-        "image_name": "44",
+        "name": "Mother 1: Should this be a solo? VI",
+        "image_name": "45",
         "frame": "435",
         "ownership_range": "[417 - 560]",
         "ownership_range_start": "417",
@@ -1074,14 +942,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.61%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,61%"
     },
     {
-        "name": "Mother 1: Should this be a solo? X",
-        "image_name": "45",
+        "name": "Mother 1: Should this be a solo? VII",
+        "image_name": "46",
         "frame": "684",
         "ownership_range": "[560 - 1144]",
         "ownership_range_start": "560",
@@ -1098,14 +963,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "2.49%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "2,49%"
     },
     {
-        "name": "Mother 1: Should this be a solo? XI",
-        "image_name": "46",
+        "name": "Mother 1: Should this be a solo? VIII",
+        "image_name": "47",
         "frame": "1603",
         "ownership_range": "[1144 - 1980]",
         "ownership_range_start": "1144",
@@ -1122,14 +984,11 @@
         "signature_bone": "left_up_leg",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "3.56%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "3,56%"
     },
     {
         "name": "Maiden 3: Sculpture flirt I",
-        "image_name": "47",
+        "image_name": "48",
         "frame": "211",
         "ownership_range": "[0 - 1346]",
         "ownership_range_start": "0",
@@ -1146,14 +1005,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "5.73%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "5,73%"
     },
     {
         "name": "Maiden 3: Sculpture flirt II",
-        "image_name": "48",
+        "image_name": "49",
         "frame": "2480",
         "ownership_range": "[1346 - 2527]",
         "ownership_range_start": "1346",
@@ -1170,14 +1026,11 @@
         "signature_bone": "left_up_leg",
         "intimacy_in_stillness": "YES",
         "scenic_route": "Null",
-        "buying_time": "5.03%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "5,03%"
     },
     {
         "name": "Maiden 3: Sculpture flirt III",
-        "image_name": "49",
+        "image_name": "50",
         "frame": "2573",
         "ownership_range": "[2527 - 2655]",
         "ownership_range_start": "2527",
@@ -1194,14 +1047,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.55%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,55%"
     },
     {
         "name": "Maiden 3: Sculpture flirt IV",
-        "image_name": "50",
+        "image_name": "51",
         "frame": "2736",
         "ownership_range": "[2655 - 2857]",
         "ownership_range_start": "2655",
@@ -1218,14 +1068,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "YES",
         "scenic_route": "Null",
-        "buying_time": "0.86%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,86%"
     },
     {
         "name": "Maiden 3: Sculpture flirt V",
-        "image_name": "51",
+        "image_name": "52",
         "frame": "2977",
         "ownership_range": "[2857 - 3055]",
         "ownership_range_start": "2857",
@@ -1242,14 +1089,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.84%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,84%"
     },
     {
         "name": "Maiden 3: Sculpture flirt VI",
-        "image_name": "52",
+        "image_name": "53",
         "frame": "3132",
         "ownership_range": "[3055 - 3307]",
         "ownership_range_start": "3055",
@@ -1266,14 +1110,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.08%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,08%"
     },
     {
         "name": "Maiden 3: Sculpture flirt VII",
-        "image_name": "53",
+        "image_name": "54",
         "frame": "3482",
         "ownership_range": "[3307 - 3698]",
         "ownership_range_start": "3307",
@@ -1290,14 +1131,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.67%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,67%"
     },
     {
         "name": "Maiden 3: Sculpture flirt VIII",
-        "image_name": "54",
+        "image_name": "55",
         "frame": "3914",
         "ownership_range": "[3698 - 3960]",
         "ownership_range_start": "3698",
@@ -1314,14 +1152,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "YES",
         "scenic_route": "Null",
-        "buying_time": "1.12%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,12%"
     },
     {
         "name": "Maiden 3: Sculpture flirt IX",
-        "image_name": "55",
+        "image_name": "56",
         "frame": "4006",
         "ownership_range": "[3960 - 4040]",
         "ownership_range_start": "3960",
@@ -1338,14 +1173,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.34%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,34%"
     },
     {
         "name": "Maiden 3: Sculpture flirt X",
-        "image_name": "56",
+        "image_name": "57",
         "frame": "4073",
         "ownership_range": "[4040 - 4103]",
         "ownership_range_start": "4040",
@@ -1362,14 +1194,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.27%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,27%"
     },
     {
         "name": "Maiden 3: Sculpture flirt XI",
-        "image_name": "57",
+        "image_name": "58",
         "frame": "4133",
         "ownership_range": "[4103 - 4276]",
         "ownership_range_start": "4103",
@@ -1386,14 +1215,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.73%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,73%"
     },
     {
         "name": "Maiden 3: Sculpture flirt XII",
-        "image_name": "58",
+        "image_name": "59",
         "frame": "4418",
         "ownership_range": "[4276 - 4494]",
         "ownership_range_start": "4276",
@@ -1410,14 +1236,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.93%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,93%"
     },
     {
         "name": "Maiden 3: Sculpture flirt XIII",
-        "image_name": "59",
+        "image_name": "60",
         "frame": "4569",
         "ownership_range": "[4494 - 4596]",
         "ownership_range_start": "4494",
@@ -1434,14 +1257,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.44%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,44%"
     },
     {
         "name": "Maiden 3: Sculpture flirt XIV",
-        "image_name": "60",
+        "image_name": "61",
         "frame": "4623",
         "ownership_range": "[4596 - 4648]",
         "ownership_range_start": "4596",
@@ -1458,14 +1278,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.22%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,22%"
     },
     {
         "name": "Maiden 2: Curtain on pleasure I",
-        "image_name": "61",
+        "image_name": "62",
         "frame": "96",
         "ownership_range": "[0 - 309]",
         "ownership_range_start": "0",
@@ -1482,14 +1299,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "YES",
-        "buying_time": "1.32%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,32%"
     },
     {
         "name": "Maiden 2: Curtain on pleasure II",
-        "image_name": "62",
+        "image_name": "63",
         "frame": "522",
         "ownership_range": "[309 - 835]",
         "ownership_range_start": "309",
@@ -1506,14 +1320,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "2.24%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "2,24%"
     },
     {
         "name": "Maiden 2: Curtain on pleasure III",
-        "image_name": "63",
+        "image_name": "64",
         "frame": "1148",
         "ownership_range": "[835 - 1231]",
         "ownership_range_start": "835",
@@ -1530,14 +1341,11 @@
         "signature_bone": "left_hand",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.69%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,69%"
     },
     {
         "name": "Maiden 2: Curtain on pleasure IV",
-        "image_name": "64",
+        "image_name": "65",
         "frame": "1314",
         "ownership_range": "[1231 - 1420]",
         "ownership_range_start": "1231",
@@ -1554,14 +1362,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.80%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,80%"
     },
     {
         "name": "Maiden 2: Curtain on pleasure V",
-        "image_name": "65",
+        "image_name": "66",
         "frame": "1525",
         "ownership_range": "[1420 - 1551]",
         "ownership_range_start": "1420",
@@ -1578,14 +1383,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.56%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,56%"
     },
     {
         "name": "Mother 3: Failed self-care attempts I",
-        "image_name": "66",
+        "image_name": "67",
         "frame": "56",
         "ownership_range": "[0 - 65]",
         "ownership_range_start": "0",
@@ -1602,14 +1404,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.27%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,27%"
     },
     {
         "name": "Mother 3: Failed self-care attempts II",
-        "image_name": "67",
+        "image_name": "68",
         "frame": "73",
         "ownership_range": "[65 - 89]",
         "ownership_range_start": "65",
@@ -1626,14 +1425,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.10%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,10%"
     },
     {
         "name": "Mother 3: Failed self-care attempts III",
-        "image_name": "68",
+        "image_name": "69",
         "frame": "105",
         "ownership_range": "[89 - 175]",
         "ownership_range_start": "89",
@@ -1650,14 +1446,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.36%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,36%"
     },
     {
         "name": "Mother 3: Failed self-care attempts IV",
-        "image_name": "69",
+        "image_name": "70",
         "frame": "244",
         "ownership_range": "[175 - 646]",
         "ownership_range_start": "175",
@@ -1674,14 +1467,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "2.01%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "2,01%"
     },
     {
         "name": "Mother 3: Failed self-care attempts V",
-        "image_name": "70",
+        "image_name": "71",
         "frame": "1048",
         "ownership_range": "[646 - 1192]",
         "ownership_range_start": "646",
@@ -1698,14 +1488,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "2.33%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "2,33%"
     },
     {
         "name": "Mother 3: Failed self-care attempts VI",
-        "image_name": "71",
+        "image_name": "72",
         "frame": "1336",
         "ownership_range": "[1192 - 1398]",
         "ownership_range_start": "1192",
@@ -1722,14 +1509,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.88%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,88%"
     },
     {
         "name": "Mother 3: Failed self-care attempts VII",
-        "image_name": "72",
+        "image_name": "73",
         "frame": "1460",
         "ownership_range": "[1398 - 1657]",
         "ownership_range_start": "1398",
@@ -1746,14 +1530,11 @@
         "signature_bone": "left_knee",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.10%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,10%"
     },
     {
         "name": "Mother 2: Nurture as mania I",
-        "image_name": "73",
+        "image_name": "74",
         "frame": "113",
         "ownership_range": "[0 - 178]",
         "ownership_range_start": "0",
@@ -1770,14 +1551,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.76%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,76%"
     },
     {
         "name": "Mother 2: Nurture as mania II",
-        "image_name": "74",
+        "image_name": "75",
         "frame": "242",
         "ownership_range": "[178 - 374]",
         "ownership_range_start": "178",
@@ -1794,14 +1572,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.84%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,84%"
     },
     {
         "name": "Mother 2: Nurture as mania III",
-        "image_name": "75",
+        "image_name": "76",
         "frame": "505",
         "ownership_range": "[374 - 534]",
         "ownership_range_start": "374",
@@ -1818,14 +1593,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.68%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,68%"
     },
     {
         "name": "Mother 2: Nurture as mania IV",
-        "image_name": "76",
+        "image_name": "77",
         "frame": "563",
         "ownership_range": "[534 - 595]",
         "ownership_range_start": "534",
@@ -1842,14 +1614,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.26%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,26%"
     },
     {
         "name": "Mother 2: Nurture as mania V",
-        "image_name": "77",
+        "image_name": "78",
         "frame": "627",
         "ownership_range": "[595 - 717]",
         "ownership_range_start": "595",
@@ -1866,14 +1635,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.52%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,52%"
     },
     {
         "name": "Mother 2: Nurture as mania VI",
-        "image_name": "78",
+        "image_name": "79",
         "frame": "807",
         "ownership_range": "[717 - 827]",
         "ownership_range_start": "717",
@@ -1890,14 +1656,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "YES",
-        "buying_time": "0.47%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,47%"
     },
     {
         "name": "Mother 2: Nurture as mania VII",
-        "image_name": "79",
+        "image_name": "80",
         "frame": "847",
         "ownership_range": "[827 - 859]",
         "ownership_range_start": "827",
@@ -1914,14 +1677,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.14%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,14%"
     },
     {
         "name": "Mother 2: Nurture as mania VIII",
-        "image_name": "80",
+        "image_name": "81",
         "frame": "871",
         "ownership_range": "[859 - 900]",
         "ownership_range_start": "859",
@@ -1938,14 +1698,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.17%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,17%"
     },
     {
         "name": "Mother 2: Nurture as mania IX",
-        "image_name": "81",
+        "image_name": "82",
         "frame": "929",
         "ownership_range": "[900 - 938]",
         "ownership_range_start": "900",
@@ -1962,14 +1719,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.16%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,16%"
     },
     {
         "name": "Mother 2: Nurture as mania X",
-        "image_name": "82",
+        "image_name": "83",
         "frame": "946",
         "ownership_range": "[938 - 961]",
         "ownership_range_start": "938",
@@ -1986,14 +1740,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.10%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,10%"
     },
     {
         "name": "Mother 2: Nurture as mania XI",
-        "image_name": "83",
+        "image_name": "84",
         "frame": "975",
         "ownership_range": "[961 - 999]",
         "ownership_range_start": "961",
@@ -2010,14 +1761,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.16%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,16%"
     },
     {
         "name": "Mother 2: Nurture as mania XII",
-        "image_name": "84",
+        "image_name": "85",
         "frame": "1023",
         "ownership_range": "[999 - 1035]",
         "ownership_range_start": "999",
@@ -2034,14 +1782,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.15%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,15%"
     },
     {
         "name": "Mother 2: Nurture as mania XIII",
-        "image_name": "85",
+        "image_name": "86",
         "frame": "1046",
         "ownership_range": "[1035 - 1059]",
         "ownership_range_start": "1035",
@@ -2058,14 +1803,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.10%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,10%"
     },
     {
         "name": "Mother 2: Nurture as mania XIV",
-        "image_name": "86",
+        "image_name": "87",
         "frame": "1071",
         "ownership_range": "[1059 - 1079]",
         "ownership_range_start": "1059",
@@ -2082,14 +1824,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "YES",
-        "buying_time": "0.09%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,09%"
     },
     {
         "name": "Mother 2: Nurture as mania XV",
-        "image_name": "87",
+        "image_name": "88",
         "frame": "1086",
         "ownership_range": "[1079 - 1105]",
         "ownership_range_start": "1079",
@@ -2106,14 +1845,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.11%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,11%"
     },
     {
         "name": "Mother 2: Nurture as mania XVI",
-        "image_name": "88",
+        "image_name": "89",
         "frame": "1123",
         "ownership_range": "[1105 - 1130]",
         "ownership_range_start": "1105",
@@ -2130,14 +1866,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.11%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,11%"
     },
     {
         "name": "Mother 2: Nurture as mania XVII",
-        "image_name": "89",
+        "image_name": "90",
         "frame": "1137",
         "ownership_range": "[1130 - 1143]",
         "ownership_range_start": "1130",
@@ -2154,14 +1887,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.06%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,06%"
     },
     {
         "name": "Mother 2: Nurture as mania XVIII",
-        "image_name": "90",
+        "image_name": "91",
         "frame": "1149",
         "ownership_range": "[1143 - 1153]",
         "ownership_range_start": "1143",
@@ -2178,14 +1908,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "YES",
-        "buying_time": "0.04%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,04%"
     },
     {
         "name": "Mother 2: Nurture as mania XIX",
-        "image_name": "91",
+        "image_name": "92",
         "frame": "1156",
         "ownership_range": "[1153 - 1249]",
         "ownership_range_start": "1153",
@@ -2202,14 +1929,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.41%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,41%"
     },
     {
         "name": "Mother 2: Nurture as mania XX",
-        "image_name": "92",
+        "image_name": "93",
         "frame": "1342",
         "ownership_range": "[1249 - 1402]",
         "ownership_range_start": "1249",
@@ -2226,14 +1950,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.65%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,65%"
     },
     {
         "name": "Mother 2: Nurture as mania XXI",
-        "image_name": "93",
+        "image_name": "94",
         "frame": "1461",
         "ownership_range": "[1402 - 1596]",
         "ownership_range_start": "1402",
@@ -2250,14 +1971,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.83%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,83%"
     },
     {
         "name": "Mother 2: Nurture as mania XXII",
-        "image_name": "94",
+        "image_name": "95",
         "frame": "1730",
         "ownership_range": "[1596 - 1781]",
         "ownership_range_start": "1596",
@@ -2274,14 +1992,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.79%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,79%"
     },
     {
         "name": "Mother 2: Nurture as mania XXIII",
-        "image_name": "95",
+        "image_name": "96",
         "frame": "1831",
         "ownership_range": "[1781 - 1844]",
         "ownership_range_start": "1781",
@@ -2298,14 +2013,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.27%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,27%"
     },
     {
         "name": "Mother 2: Nurture as mania XXIV",
-        "image_name": "96",
+        "image_name": "97",
         "frame": "1856",
         "ownership_range": "[1844 - 1892]",
         "ownership_range_start": "1844",
@@ -2322,14 +2034,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.21%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,21%"
     },
     {
         "name": "Mother 2: Nurture as mania XXV",
-        "image_name": "97",
+        "image_name": "98",
         "frame": "1928",
         "ownership_range": "[1892 - 1937]",
         "ownership_range_start": "1892",
@@ -2346,14 +2055,11 @@
         "signature_bone": "right_hand",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.19%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,19%"
     },
     {
         "name": "Mother 2: Nurture as mania XXVI",
-        "image_name": "98",
+        "image_name": "99",
         "frame": "1946",
         "ownership_range": "[1937 - 1961]",
         "ownership_range_start": "1937",
@@ -2370,14 +2076,11 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "0.10%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "0,10%"
     },
     {
         "name": "Mother 2: Nurture as mania XXVII",
-        "image_name": "99",
+        "image_name": "100",
         "frame": "1975",
         "ownership_range": "[1961 - 2262]",
         "ownership_range_start": "1961",
@@ -2394,9 +2097,6 @@
         "signature_bone": "Null",
         "intimacy_in_stillness": "Null",
         "scenic_route": "Null",
-        "buying_time": "1.28%",
-        "transition": "texte",
-        "other1": "texte",
-        "other2": "texte"
+        "buying_time": "1,28%"
     }
 ]
